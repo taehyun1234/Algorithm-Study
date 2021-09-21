@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\DP">
+      <UniqueIdentifier>{27049c43-c8c8-4f01-be68-4be9488b18b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BruteForce">
+      <UniqueIdentifier>{16c7cafe-00d8-46d1-84e1-600541a1d5a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Greedy">
+      <UniqueIdentifier>{69f331db-3e27-4704-bdbe-30e4e57a797e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BFS">
+      <UniqueIdentifier>{6e151d2d-cde4-4b53-bc33-1bb31bbeb814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DFS">
+      <UniqueIdentifier>{c3fe3375-7399-4b11-bf08-65a77db508ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="백준 2839.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
