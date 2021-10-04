@@ -29,5 +29,32 @@
     <ClCompile Include="백준 2839.cpp">
       <Filter>소스 파일\DP</Filter>
     </ClCompile>
+    <ClCompile Include="DFS_행렬영역구하기.cpp">
+      <Filter>소스 파일\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="양한마리,양두마리.cpp">
+      <Filter>소스 파일\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="덩치%287568번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="블랙잭%282798번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="분해합%282231번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="한수%281065번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="숫자 야구%282503번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="일곱 난쟁이%282309번%29.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="체스판 다시 칠하기(1018번).cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
