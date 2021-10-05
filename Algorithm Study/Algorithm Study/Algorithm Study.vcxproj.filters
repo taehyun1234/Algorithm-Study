@@ -56,5 +56,14 @@
     <ClCompile Include="체스판 다시 칠하기(1018번).cpp">
       <Filter>소스 파일\BruteForce</Filter>
     </ClCompile>
+    <ClCompile Include="동전 0(11047번).cpp">
+      <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="ATM (11399번).cpp">
+      <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="회의실 배정%281931번%29.cpp">
+      <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
