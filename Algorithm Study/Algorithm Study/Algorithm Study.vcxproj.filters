@@ -24,11 +24,14 @@
     <Filter Include="소스 파일\DFS">
       <UniqueIdentifier>{c3fe3375-7399-4b11-bf08-65a77db508ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\수학">
+      <UniqueIdentifier>{8b9946b7-d3e1-4ae1-98e7-5f667b8dee4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\그래프이론">
+      <UniqueIdentifier>{73b48029-65ef-4548-adbb-76291946152e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="백준 2839.cpp">
-      <Filter>소스 파일\DP</Filter>
-    </ClCompile>
     <ClCompile Include="DFS_행렬영역구하기.cpp">
       <Filter>소스 파일\DFS</Filter>
     </ClCompile>
@@ -64,6 +67,21 @@
     </ClCompile>
     <ClCompile Include="회의실 배정%281931번%29.cpp">
       <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="백준 2839.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="보물(1026번).cpp">
+      <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="잃어버린 괄호(1541번).cpp">
+      <Filter>소스 파일\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="에라토스테네스의 체%282960번%29.cpp">
+      <Filter>소스 파일\수학</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS와 BFS(1260번).cpp">
+      <Filter>소스 파일\그래프이론</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
