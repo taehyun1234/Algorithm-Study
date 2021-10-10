@@ -92,5 +92,8 @@
     <ClCompile Include="피보나치 함수%28DP%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="유기농 배추 (1012번).cpp">
+      <Filter>소스 파일\DFS</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
