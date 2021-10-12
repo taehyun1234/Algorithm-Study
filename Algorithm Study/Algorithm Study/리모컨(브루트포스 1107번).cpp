@@ -26,8 +26,8 @@ int press(int t)
 		int len = 0;
 		while (t)
 		{
-			int tmp = t % 10;
-			if (bBroken[tmp]==true) return 0;
+			int j = t % 10;
+			if (bBroken[j]==true) return 0;
 			len++;
 			t /= 10;
 		}
@@ -44,7 +44,8 @@ int CaseSecond(int nChannel, int nBrokenbuttonCount)
 	for (int i = 0; i <= 1000000; i++)
 	{
 		int tmp = i;
-		int len = press(tmp);
+		int len = press(tmp);				// press 함수는 숫자 입력할 때 얼만큼 입력해야하는지 횟수를 나타내주는 함수임. 즉, tmp가 123이다? 근데, 3이 고장났다. 그러면 122를 누르도록 하고, 버튼이 3회 눌렸으니 press에서 3을 뱉는다.
+
 		if (len > 0)
 		{
 			int press = tmp - nChannel;
@@ -55,6 +56,9 @@ int CaseSecond(int nChannel, int nBrokenbuttonCount)
 			}
 		}
 	}
+
+	// 1000000번의 경우 중에 가장 작은 값을 출력해줄 것.
+
 	return answer;
 }
 
