@@ -101,5 +101,8 @@
     <ClCompile Include="나는야 포켓몬 마스터 이다솜%28해시 테이블 1620번%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="집합 (비트마스킹, 11723번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
