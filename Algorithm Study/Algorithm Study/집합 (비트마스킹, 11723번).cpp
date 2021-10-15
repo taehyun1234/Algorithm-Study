@@ -13,7 +13,7 @@ int main()
 	
 	cin >> calcuCount;
 
-	int bitmask = 0;
+	bool bCheck[20] = {false,};
 
 	for (int i = 0; i < calcuCount; i++)
 	{
@@ -24,30 +24,40 @@ int main()
 
 		if (strTmp == "add")
 		{
-			bitmask |= (1 << nTmp);
+			bCheck[nTmp - 1] = true;
 		}
 		else if (strTmp == "remove")
 		{
-			bitmask = bitmask & (~nTmp);		
+			bCheck[nTmp - 1] = false;
 		}
 		else if (strTmp == "check")
 		{
-			if (bitmask & (1 << nTmp))
-				cout << 1 << endl;
+			if (bCheck[nTmp - 1])
+			{
+				cout << "1\n";
+			}
 			else
-				cout << 0 << endl; 
+			{
+				cout << "0\n";
+			}
 		}
 		else if (strTmp == "toggle")
 		{
-			bitmask ^= (1 << nTmp);
+			bCheck[nTmp-1] = ~bCheck[nTmp-1];
 		}
 		else if (strTmp == "all")
 		{
-			bitmask = (1<<21)  - 1;
+			for (int i = 0; i < 20; i++)
+			{
+				bCheck[i] = 1;
+			}
 		}
 		else if (strTmp == "empty")
 		{
-			bitmask = 0;
+			for (int i = 0; i < 20; i++)
+			{
+				bCheck[i] = 0;
+			}
 		}
 	}
 	// 1111 1111 1111 1111 1111

@@ -104,5 +104,8 @@
     <ClCompile Include="집합 (비트마스킹, 11723번).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="비밀번호 찾기(해시를 사용한 집합과 맵 17219번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
