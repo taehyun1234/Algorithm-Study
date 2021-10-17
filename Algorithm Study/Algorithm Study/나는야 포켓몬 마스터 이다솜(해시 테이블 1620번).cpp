@@ -62,7 +62,7 @@ int main()
 // 위의 방법은 시간초과로 뜸. -> 단순한 해시테이블이 아님.
 // 밑의 방법은 시간초과가 뜨지 않음.
 // 별로 다를게 없는데.. 왜?
-// 더 봐야할듯.
+// cin, cout, endl과 같은 입출력 경우 시간초과가 나오는 경우가 많음. 그래서 sync_with_stdio를 쓰던지 그냥 printf,scanf 쓰면됨.
 
 #include <iostream>
 #include <vector>

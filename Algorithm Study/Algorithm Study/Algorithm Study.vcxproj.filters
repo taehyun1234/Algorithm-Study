@@ -110,5 +110,8 @@
     <ClCompile Include="쿼드트리%28분할 정복 1992번%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="단지번호붙이기 %28DFS 2667번%29.cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
