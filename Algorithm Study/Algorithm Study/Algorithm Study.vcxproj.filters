@@ -74,9 +74,6 @@
     <ClCompile Include="회의실 배정%281931번%29.cpp">
       <Filter>소스 파일\Greedy</Filter>
     </ClCompile>
-    <ClCompile Include="백준 2839.cpp">
-      <Filter>소스 파일\DP</Filter>
-    </ClCompile>
     <ClCompile Include="보물(1026번).cpp">
       <Filter>소스 파일\Greedy</Filter>
     </ClCompile>
@@ -112,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="단지번호붙이기 %28DFS 2667번%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
+    <ClCompile Include="계단 오르기%28DP 2579번%29.cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
+    <ClCompile Include="설탕%28백준 2839%29.cpp">
+      <Filter>소스 파일\Greedy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
