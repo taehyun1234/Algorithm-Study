@@ -128,5 +128,8 @@
     <ClCompile Include="바이러스 %28DFS 2606번%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="1로 만들기(DP 1463번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
