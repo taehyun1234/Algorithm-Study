@@ -131,5 +131,8 @@
     <ClCompile Include="1로 만들기(DP 1463번).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="미로탐색(BFS 2178번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

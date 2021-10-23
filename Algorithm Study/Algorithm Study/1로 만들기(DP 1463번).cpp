@@ -20,7 +20,7 @@ int main()
 	// dp[n] = dp[n/3] + 1;					// 3으로 나눠떨어지는 경우
 	// dp[n] = dp[n/2] + 1;					// 2로 나눠떨어지는 경우
 	// dp[n] = dp[n-1] + 1;					// 1을 빼는 경우
-	
+
 	for (int i = 2; i <= MAX_COUNT; i++)
 	{
 		dp[i] = dp[i - 1] + 1;
@@ -28,7 +28,7 @@ int main()
 		{
 			dp[i] = min(dp[i], dp[i / 3] + 1);
 		}
-		else if (i % 2 == 0)
+		if (i % 2 == 0)
 		{
 			dp[i] = min(dp[i], dp[i / 2] + 1);
 		}
