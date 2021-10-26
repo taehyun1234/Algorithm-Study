@@ -137,5 +137,8 @@
     <ClCompile Include="듣보잡(HashSet 1764번).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="숨바꼭질%28BFS 1697번%29.cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
