@@ -140,5 +140,8 @@
     <ClCompile Include="숨바꼭질%28BFS 1697번%29.cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="뱀과 사다리 게임(BFS 16928번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

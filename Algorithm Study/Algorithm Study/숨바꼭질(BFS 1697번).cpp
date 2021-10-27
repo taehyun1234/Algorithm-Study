@@ -7,7 +7,6 @@ bool check[MAX_POINT];
 
 int BFS(int cur, int target)
 {
-	int answer = 0;
 	queue<pair<int,int>> q;
 
 	q.push(make_pair(cur,0));
@@ -20,35 +19,25 @@ int BFS(int cur, int target)
 		q.pop();
 		if (curPt == target)
 		{
-			answer = depth;
-			break;
+			return depth;
 		}
-		if (curPt * 2 < MAX_POINT)
+
+		if (curPt * 2 < MAX_POINT  && check[curPt * 2] == false)
 		{
-			if ((curPt * 2 < MAX_POINT && curPt * 2 > 0) && check[curPt * 2] == false)
-			{
-				q.push(make_pair(curPt * 2, depth + 1));
-				check[curPt * 2] = true;
-			}
+			q.push(make_pair(curPt * 2, depth + 1));
+			check[curPt * 2] = true;
 		}
-		if (curPt + 1 < MAX_POINT)
+		if (curPt + 1 < MAX_POINT && check[curPt + 1] == false)
 		{
-			if ((curPt + 1 < MAX_POINT && curPt + 1 > 0)&& check[curPt + 1] == false)
-			{
-				q.push(make_pair(curPt + 1, depth + 1));
-				check[curPt + 1] = true;
-			}
+			q.push(make_pair(curPt + 1, depth + 1));
+			check[curPt + 1] = true;
 		}
-		if (curPt - 1 < MAX_POINT)
+		if (curPt - 1 >= 0 && check[curPt - 1] == false)
 		{
-			if ((curPt - 1 < MAX_POINT && curPt - 1 > 0) && check[curPt - 1] == false)
-			{
-				q.push(make_pair(curPt - 1, depth + 1));
-				check[curPt - 1] = true;
-			}
+			q.push(make_pair(curPt - 1, depth + 1));
+			check[curPt - 1] = true;
 		}
 	}
-	return answer;
 }
 
 int main()
