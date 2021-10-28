@@ -1,79 +1,62 @@
 #include <iostream>
 #include <queue>
-#include <cstring>
-
 using namespace std;
+#define MAX_VERTEX 1001
+#define MAX_LINE 10001
 
-const int MAX = 1000 + 1;
-int N, M, V;
-int adjacent[MAX][MAX];
-bool visited[MAX];
+int N;			// 정점의 갯수
+int M;			// 간선의 갯수
+int v;			// 방문 vertex
+int vertex[MAX_VERTEX][MAX_VERTEX];
+bool bCheck[MAX_VERTEX][MAX_VERTEX];
 
-queue<int> q;
-
-void DFS(int idx)
+int main()
 {
-	cout << idx << " ";
+	cin >> N >> M >> v;
 
 	for (int i = 0; i < N; i++)
 	{
-		if (adjacent[idx][i+1] && !visited[i+1])
+		for (int j = 0; j < N; j++)
 		{
-			visited[i+1] = true;
-			//인접한 노드에 대해서 또 다시 DFS
-			DFS(i+1);
+			vertex[i][j] = 0;
 		}
 	}
-}
-
-
-
-void BFS(int idx)
-{
-	q.push(idx);
-	visited[idx] = 1;
-
-	while (!q.empty())
-	{
-		idx = q.front();
-		q.pop();
-
-		cout << idx << " ";
-		//BFS는 해당 노드에 인접한 노드들을 모두 추가한 뒤 BFS 진행
-
-		for (int i = 0; i < N; i++)
-		{
-			if (adjacent[idx][i+1] && !visited[i+1])	
-			{	
-				visited[i+1] = true;	
-				q.push(i+1);	
-			}
-		}
-	}
-}
-
-
-
-int main(void)
-{
-	cin >> N >> M >> V;
 
 	for (int i = 0; i < M; i++)
 	{
-		int from, to;
-		cin >> from >> to;
-		adjacent[from][to] = 1;
-		adjacent[to][from] = 1;
+		int tmp1, tmp2;
+		cin >> tmp1 >> tmp2;
+		vertex[tmp1][tmp2] = 1;
+		vertex[tmp2][tmp1] = 1;
 	}
 
-	visited[V] = 1; //V에서 시작하므로
-	DFS(V);
-	cout << endl;
-
-	memset(visited, false, sizeof(visited));
-	BFS(V);
-	cout << endl;
-
 	return 0;
+}
 
+int DFS()
+{
+
+}
+
+int BFS()
+{
+	queue<int> q;
+	
+	q.push(v);
+
+	while (!q.empty())
+	{
+		int idx = q.front();
+
+		q.pop();
+
+		for (int i = 0; i < N; i++)
+		{
+			if (vertex[idx][i] == 1 && bCheck[idx][i] == false)
+			{
+				q.push(i);
+				bCheck[idx][i] = true;
+			}
+		}
+	}
 }
