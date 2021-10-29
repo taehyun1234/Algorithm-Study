@@ -7,8 +7,12 @@ using namespace std;
 int N;			// 정점의 갯수
 int M;			// 간선의 갯수
 int v;			// 방문 vertex
-int vertex[MAX_VERTEX][MAX_VERTEX];
-bool bCheck[MAX_VERTEX][MAX_VERTEX];
+int bVertex[MAX_VERTEX][MAX_VERTEX];
+int dVertex[MAX_VERTEX][MAX_VERTEX];
+bool bCheck[MAX_VERTEX];
+
+void BFS();
+void DFS(int x);
 
 int main()
 {
@@ -18,7 +22,8 @@ int main()
 	{
 		for (int j = 0; j < N; j++)
 		{
-			vertex[i][j] = 0;
+			bVertex[i][j] = 0;
+			dVertex[i][j] = 0;
 		}
 	}
 
@@ -26,23 +31,51 @@ int main()
 	{
 		int tmp1, tmp2;
 		cin >> tmp1 >> tmp2;
-		vertex[tmp1][tmp2] = 1;
-		vertex[tmp2][tmp1] = 1;
+		bVertex[tmp1][tmp2] = 1;
+		bVertex[tmp2][tmp1] = 1;
+		dVertex[tmp1][tmp2] = 1;
+		dVertex[tmp2][tmp1] = 1;
 	}
+
+	DFS(v);
+
+	cout << endl;
+	for (int i = 0; i < MAX_VERTEX; i++)
+	{
+		bCheck[i] = false;
+	}
+
+	BFS();
 
 	return 0;
 }
 
-int DFS()
+void DFS(int x)
 {
+	cout << x<<" ";
+	bCheck[x] = true;
+	for (int i = 0; i <= N; i++)
+	{
+		if (bCheck[i] == true || dVertex[x][i] == 0)
+			continue;
 
+		if (dVertex[x][i] == 1 && bCheck[i] == false)
+		{
+			dVertex[x][i] = 0;
+			dVertex[i][x] = 0;
+			bCheck[i] = true;
+			DFS(i);
+		}
+	}
 }
 
-int BFS()
+void BFS()
 {
 	queue<int> q;
 	
 	q.push(v);
+
+	cout << v<<" ";
 
 	while (!q.empty())
 	{
@@ -50,12 +83,15 @@ int BFS()
 
 		q.pop();
 
-		for (int i = 0; i < N; i++)
+		for (int i = 0; i <= N; i++)
 		{
-			if (vertex[idx][i] == 1 && bCheck[idx][i] == false)
+			if (bVertex[idx][i] == 1 && bCheck[i] == false)
 			{
 				q.push(i);
-				bCheck[idx][i] = true;
+				bVertex[idx][i] = 0;
+				bVertex[i][idx] = 0;
+				bCheck[i] = true;
+				cout << i << " ";
 			}
 		}
 	}
