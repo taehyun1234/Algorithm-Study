@@ -1,98 +1,71 @@
 #include <iostream>
 #include <queue>
 // 뱀과 사다리를 굳이 구별할 필요가 없음. 그냥 하나로 할 것.
-
-using namespace std;
 #define MAX_NUMBER 15
 #define MAP_SIZE 101
 
-int N, M;
-int nLadder[MAX_NUMBER];
-int nLadderTarget[MAX_NUMBER];
-int nSnake[MAX_NUMBER];
-int nSnakeTarget[MAX_NUMBER];
-bool bCheck[MAP_SIZE];
+using namespace std;
 
+int map[MAP_SIZE];
+
+int ladder[MAP_SIZE];
+bool bCheck[MAP_SIZE];
+int directMapCnt;
 int BFS();
 
 int main()
-{	
+{
+	int answer;
+	int N, M;
 	cin >> N >> M;
+	directMapCnt = N + M;
 
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < directMapCnt; i++)
 	{
 		int tmp1, tmp2;
 		cin >> tmp1 >> tmp2;
-		nLadder[i] = tmp1;
-		nLadderTarget[i] = tmp2;
+		ladder[tmp1] = tmp2;
 	}
 
-	for (int i = 0; i < M; i++)
-	{
-		int tmp1, tmp2;
-		cin >> tmp1 >> tmp2;
-		nSnake[i] = tmp1;
-		nSnakeTarget[i] = tmp2;
-	}
-	int answer = BFS();
-
+	answer = BFS();
 	cout << answer;
 }
 
 int BFS()
 {
 	queue<pair<int,int>> q;
-
-	q.push(make_pair(1, 0));
+	q.push({ 1,0 });
+	bCheck[1] = true;
 
 	while (!q.empty())
 	{
-		int curPt = q.front().first;
-		int curDepth = q.front().second;
+		int curpt = q.front().first;
+		int rollCnt = q.front().second;
 
 		q.pop();
-		if (curPt == 100)
-			return curDepth;
 
-		for (int i = 0; i < N; i++)
+		if (curpt == 100)
+			return rollCnt;
+
+		for (int i = 1; i <= 6; i++)
 		{
-			if (nLadder[i] == curPt)
+			int nextPos = curpt + i;
+			if (bCheck[nextPos] == false && nextPos <MAP_SIZE)
 			{
-				q.push(make_pair(nLadderTarget[i], curDepth + 1));
-				bCheck[curPt] = true;
-			}
-			else
-			{
-				for (int j = 0; j < 6; j++)
+				if (ladder[nextPos] != 0)
 				{
-					if (bCheck[curPt+j] == false && curPt + j + 1 <= MAP_SIZE)
-					{
-						q.push(make_pair(curPt + j + 1, curDepth + 1));
-						bCheck[curPt+j] = true;
-					}
+					nextPos = ladder[nextPos];
 				}
+
+				q.push({ nextPos ,rollCnt + 1 });
+				bCheck[nextPos] = true;
 			}
 		}
-
-		for (int i = 0; i < M; i++)
-		{
-			if (nSnake[i] == curPt)
-			{
-				q.push(make_pair(nSnakeTarget[i], curDepth + 1));
-				bCheck[curPt] = true;
-			}
-			else
-			{
-				for (int j = 0; j < 6; j++)
-				{
-					if (bCheck[curPt+j] == false && curPt + j + 1 <= MAP_SIZE)
-					{
-						q.push(make_pair(curPt + j + 1, curDepth + 1));
-						bCheck[curPt+j] = true;
-					}
-				}
-			}
-		}
-
 	}
 }
+
+//2 1
+//2 60
+//30 98
+//65 25
+// 1 1 1 
