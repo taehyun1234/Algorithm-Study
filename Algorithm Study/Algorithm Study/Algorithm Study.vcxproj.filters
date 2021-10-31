@@ -36,6 +36,9 @@
     <Filter Include="소스 파일\Solved.ac\3단계">
       <UniqueIdentifier>{1cf3ac0e-2617-49cc-8951-645b6631f03e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Solved.ac\2단계">
+      <UniqueIdentifier>{2f4a7705-eeb5-4050-b7a2-cda5f23a65e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DFS_행렬영역구하기.cpp">
@@ -142,6 +145,9 @@
     </ClCompile>
     <ClCompile Include="뱀과 사다리 게임(BFS 16928번).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
+    <ClCompile Include="직각삼각형.cpp">
+      <Filter>소스 파일\Solved.ac\2단계</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
