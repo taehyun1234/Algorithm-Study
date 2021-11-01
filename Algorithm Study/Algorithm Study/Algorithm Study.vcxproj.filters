@@ -149,5 +149,8 @@
     <ClCompile Include="직각삼각형.cpp">
       <Filter>소스 파일\Solved.ac\2단계</Filter>
     </ClCompile>
+    <ClCompile Include="2xN타일링(DP 11726번).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
