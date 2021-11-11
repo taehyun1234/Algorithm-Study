@@ -155,5 +155,8 @@
     <ClCompile Include="패션왕 신해빈(9375 해시).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="구간 합 구하기(11659번 구현).cpp">
+      <Filter>소스 파일\Solved.ac\3단계</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
