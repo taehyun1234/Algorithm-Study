@@ -158,5 +158,8 @@
     <ClCompile Include="구간 합 구하기(11659번 구현).cpp">
       <Filter>소스 파일\Solved.ac\3단계</Filter>
     </ClCompile>
+    <ClCompile Include="최소_스패닝_트리%28Prim 1197번%29.cpp">
+      <Filter>소스 파일\그래프이론</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
