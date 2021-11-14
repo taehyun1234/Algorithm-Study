@@ -1,48 +1,56 @@
 #include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
-#define VERTEX_MAX 10001
-#define EDGE_MAX 100000
 
-int vertex[VERTEX_MAX][VERTEX_MAX];
-bool vCheck[VERTEX_MAX];
-int main()
+bool bVisited[10001];
+vector<pair<int, int>> edge[10001];
+
+int PrimAlgorithm()
 {
-	int M, N;
-	int vertexcnt = 0;
 	int answer = 0;
+	priority_queue < pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;		// 큰 순서로 정렬하는 우선순위큐를 만든다.
+	// first는 가중치, second는 정점의 minHeap
 
-	cin >> M;
-	cin >> N;
-
-	for (int i = 0; i < VERTEX_MAX; i++)
+	pq.push(make_pair(0, 1));		// 1번 정점부터 시작, 가중치가 가장 작은 원소가 맨 위로 가게 된다.
+	
+	while (!pq.empty())
 	{
-		vCheck[i] = false;
-		for (int j = 0; j < VERTEX_MAX; j++)
+		pair<int, int> cur = pq.top();			// 가중치가 가장 작은 원소를 탐색할 것이므로, pq의 top이 된다.
+		pq.pop();										// cur에 저장했으니, 뽑아낸다.
+
+		if (bVisited[cur.second] == true)		// 이미 방문한 적이 있다면, 그냥 패스한다.
+			continue;
+
+		bVisited[cur.second] = true;				// 위 구문을 안거쳤으니, 방문한 적이 없다.
+
+		answer += cur.first;
+
+		for (int i = 0; i < edge[cur.second].size(); i++)
 		{
-			vertex[i][j] = 0;
+			if (!bVisited[edge[cur.second][i].second])		// 현재 정점에서 이동할 수 있는 모든 정점에 대해 방문하지 않았다면, 방문할 목록으로 추가해준다.
+			{
+				pq.push(edge[cur.second][i]);
+			}
 		}
 	}
+	return answer;
+}
 
-	for (int i = 0; i < N; i++)
+int main()
+{
+	int nVertex, nEdge;
+	cin >> nVertex >> nEdge;
+
+	for (int i = 0; i < nEdge; i++)
 	{
 		int nTmp1, nTmp2, nTmp3;
 		cin >> nTmp1 >> nTmp2 >> nTmp3;
-		vertex[nTmp1][nTmp2] = nTmp3;
+		edge[nTmp1].push_back(make_pair(nTmp3, nTmp2));
+		edge[nTmp2].push_back(make_pair(nTmp3, nTmp1));
 	}
+	int result = PrimAlgorithm();
 
-	// 출발 정점 설정 1
-	vertexcnt++;
-	vCheck[1] = true;
-	while (vertexcnt < M)
-	{
-		// 모든 점과 연결된 간선의 최소값을 골라야 한다.
-		// 이 때의 최소 값은 연결되어 있지 않은 값이어야 한다.
-		for (int i = 0; i < M; i++)
-		{
-
-		}
-	}
-
-
+	cout << result;
 	return 0;
 }
