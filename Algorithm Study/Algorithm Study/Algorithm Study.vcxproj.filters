@@ -42,6 +42,9 @@
     <Filter Include="ComputerScience">
       <UniqueIdentifier>{cd2f8890-fdab-4320-b804-df84622b5f37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\C++">
+      <UniqueIdentifier>{df772318-22e9-4fbb-ac9b-df0e16dcc5bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DFS_행렬영역구하기.cpp">
@@ -163,6 +166,9 @@
     </ClCompile>
     <ClCompile Include="최소_스패닝_트리%28Prim 1197번%29.cpp">
       <Filter>소스 파일\그래프이론</Filter>
+    </ClCompile>
+    <ClCompile Include="push_emplace_back_차이.cpp">
+      <Filter>소스 파일\C++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
