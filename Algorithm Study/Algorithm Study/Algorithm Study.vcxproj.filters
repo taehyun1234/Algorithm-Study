@@ -173,6 +173,9 @@
     <ClCompile Include="복사생성자_이동생성자_이동대입연산자.cpp">
       <Filter>소스 파일\C++</Filter>
     </ClCompile>
+    <ClCompile Include="마인크래프트%28BruteForce 18111번%29.cpp">
+      <Filter>소스 파일\Solved.ac\2단계</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Hash 관련 내용 공부.txt">
