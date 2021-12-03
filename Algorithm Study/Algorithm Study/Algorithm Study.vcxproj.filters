@@ -184,5 +184,8 @@
     <Text Include="BFS, DFS 그리고 AStar에 대해 공부하기.txt">
       <Filter>ComputerScience</Filter>
     </Text>
+    <Text Include="Coroutine.txt">
+      <Filter>ComputerScience</Filter>
+    </Text>
   </ItemGroup>
 </Project>

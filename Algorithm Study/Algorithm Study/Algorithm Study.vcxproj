@@ -379,6 +379,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="BFS, DFS 그리고 AStar에 대해 공부하기.txt" />
+    <Text Include="Coroutine.txt" />
     <Text Include="Hash 관련 내용 공부.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
