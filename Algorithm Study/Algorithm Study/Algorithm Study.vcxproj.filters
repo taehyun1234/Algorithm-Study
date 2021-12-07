@@ -187,5 +187,8 @@
     <Text Include="Coroutine.txt">
       <Filter>ComputerScience</Filter>
     </Text>
+    <Text Include="Unreal 기록.txt">
+      <Filter>ComputerScience</Filter>
+    </Text>
   </ItemGroup>
 </Project>
